@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/Styles/global.css"],
+  "sourcesContent": ["body {\n    font-family: Arial, sans-serif;\n  }\n  \n  .products {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 20px;\n  }\n  \n  .product-card {\n    border: 1px solid #ccc;\n    padding: 20px;\n    width: 200px;\n  }\n  \n  table {\n    width: 100%;\n    border-collapse: collapse;\n  }\n  \n  table, th, td {\n    border: 1px solid #ccc;\n  }\n  \n  th, td {\n    padding: 10px;\n    text-align: left;\n  }\n  \n  .summary p {\n    text-align: right;\n    margin: 0;\n    font-size: 16px;\n  }\n  \n\n  .button {\n    background-color: #070b0a;\n    border: none;\n    color: white;\n    padding: 10px 22px;\n    text-align: center;\n    text-decoration: none;\n    display: inline-block;\n    font-size: 16px;\n    margin: 4px 2px;\n    cursor: pointer;\n    \n}\n"],
+  "mappings": ";AAAA;AACI;;AAGF;AACE;AACA;AACA;;AAGF;AACE;AAXJ;AAaI;;AAGF;AACE;AACA;;AAGF;;;AACE;;AAGF;;AAzBF;AA2BI;;AAGF;AACE;AA/BJ;AAiCI;;AAIF;AACE;AACA;AACA;AAxCJ;AA0CI;AACA;AACA;AACA;AA7CJ;AA+CI;;",
+  "names": []
+}

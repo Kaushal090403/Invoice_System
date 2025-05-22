@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/add-to-cart.jsx"],
+  "sourcesContent": ["// REMIX HMR BEGIN\nimport * as __hmr__ from \"remix:hmr\";\nif (import.meta) {\nimport.meta.hot = __hmr__.createHotContext(\n//@ts-expect-error\n\"app\\\\routes\\\\add-to-cart.jsx\"\n);\n\n}\n// REMIX HMR END\n\nimport { redirect } from \"@remix-run/node\";\nimport styles from './Styles/global.css';\n\nexport let action = async ({ request }) => {\n  let formData = await request.formData();\n  let product = {\n    id: formData.get(\"id\"),\n    name: formData.get(\"name\"),\n    price: formData.get(\"price\"),\n    quantity: 1\n  };\n\n  // Here you would normally update the session cart, for simplicity we are redirecting\n  return redirect(\"/cart\");\n};\n\n\nexport function links() {\n  return [{ rel: 'stylesheet', href: styles }];\n}"],
+  "mappings": ";;;;;;;;;;;;;;;AAWA,kBAAyB;AATzB,IAAI,aAAa;AACjB,cAAY,MAAc;AAAA;AAAA,IAE1B;AAAA,EACA;AAEA;AAoBO,SAAS,QAAQ;AACtB,SAAO,CAAC,EAAE,KAAK,cAAc,MAAM,eAAO,CAAC;AAC7C;",
+  "names": []
+}

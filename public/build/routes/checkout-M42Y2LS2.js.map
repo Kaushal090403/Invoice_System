@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/checkout.jsx"],
+  "sourcesContent": ["// REMIX HMR BEGIN\nimport * as __hmr__ from \"remix:hmr\";\nif (import.meta) {\nimport.meta.hot = __hmr__.createHotContext(\n//@ts-expect-error\n\"app\\\\routes\\\\checkout.jsx\"\n);\n\n}\n// REMIX HMR END\n\nimport { redirect } from \"@remix-run/node\";\nimport styles from './Styles/global.css';\n\nexport let action = async ({ request }) => {\n  let formData = await request.formData();\n\n  let customer = {\n    name: formData.get(\"name\"),\n    email: formData.get(\"email\"),\n    address: formData.get(\"address\")\n  };\n\n  let cart = [\n  { id: 1, name: \"Bohemian Platform Bed\", price: 599.00, quantity: 1 },\n  { id: 2, name: \"Yoji Chair\", price: 499.00, quantity: 1 }];\n\n\n  let subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);\n  let gst = subtotal * 0.18;\n  let grandTotal = subtotal + gst;\n\n  // In a real-world scenario, you would store or process the order\n  console.log(\"Customer Details:\", customer);\n  console.log(\"Cart Details:\", cart);\n  console.log(\"Grand Total:\", grandTotal);\n\n  // Redirect to success page or confirmation\n  return redirect(\"/success\");\n};\n\n\nexport function links() {\n  return [{ rel: 'stylesheet', href: styles }];\n}"],
+  "mappings": ";;;;;;;;;;;;;;;AAWA,kBAAyB;AATzB,IAAI,aAAa;AACjB,cAAY,MAAc;AAAA;AAAA,IAE1B;AAAA,EACA;AAEA;AAkCO,SAAS,QAAQ;AACtB,SAAO,CAAC,EAAE,KAAK,cAAc,MAAM,eAAO,CAAC;AAC7C;",
+  "names": []
+}
